@@ -1,0 +1,11 @@
+<h2><%= @book.title %></h2>
+<div class="display_index">
+  <ul>
+    <li class="no_bullet"><%= image_tag(@book.image, :class => 'thumb') %></li>
+    <li><%= link_to(@book.author.name, @book.author) if @book.author %></li>
+    <li><%= @book.year %></li>
+    <li><%= @book.page %></li>
+    <li><%= @book.genre %></li>
+    <li><%= @book.isbn %></li>
+  </ul>
+ </div>

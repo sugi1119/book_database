@@ -1,0 +1,18 @@
+
+<h2 class="display_form"><%= @author.name %></h2>
+<div class ="display_index">
+<ul>
+  <li class="no_bullet"><%= image_tag(@author.image, :class => 'medium') %></li>
+  <li>Nationality:<%= @author.nationality %></li>
+  <li>Date of Birth:<%= @author.dob.strftime('%B %d %Y') if @author.dob %></li>
+</ul>
+</div>
+<div class ="d_book"
+<% @author.books.each do |book| %>
+<ul class = "books">
+  <li class="no_bullet"><%= image_tag(book.image) %> </li>
+  <li><%= link_to(book.title, book) %></li>
+</ul>
+<% end %>
+</div>
+

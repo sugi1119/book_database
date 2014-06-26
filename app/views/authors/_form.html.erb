@@ -1,0 +1,24 @@
+<%= form_for @author do |f| %>
+  <p>
+    <%= f.label :name, "Author Name" %>
+    <%= f.text_field :name, :autofocus => true %>
+  </p>
+
+  <p>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </p>
+
+  <p>
+    <%= f.label :dob, "Date of Birth" %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+  </p>
+
+  <p>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+  </p>
+ <div class="form_s">
+  <%= f.submit %>
+ </div>
+<% end %>

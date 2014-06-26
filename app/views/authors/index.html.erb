@@ -1,0 +1,15 @@
+<div class="display_index">
+<% @authors.each do |author| %>
+<div class ="book_display">
+  <ul>
+    <li class="no_bullet"><%= image_tag(author.image, :class => 'thumb') %></li>
+    <li>Name:<%= link_to(author.name, author) %></li>
+    <li>Nationality:<%= author.nationality %></li>
+    <li>Date of Birth:<%= author.dob.strftime('%B %d %Y') if author.dob %></li>
+    <li class="no_bullet"><%= link_to('Edit', edit_author_path(author)) %></li>
+    <li class="no_bullet"><%= link_to('Delete', author, :data => {:confirm => 'Are you sure to delete the author from the list?', :method => :delete}) %></li>
+  </ul>
+</div>
+<% end %>
+</div>
+
