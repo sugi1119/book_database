@@ -6,14 +6,18 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
+  Rails 4.1 
+  
 * System dependencies
+  
 
 * Configuration
 
 * Database creation
+  Postgres v9.3 
 
 * Database initialization
+  
 
 * How to run the test suite
 
